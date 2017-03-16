@@ -14,6 +14,7 @@ class cloudmin::params {
     $serial = undef
     $key    = undef
     $gpgkey = 'CB9262B0'
+    $port   = '10000'
     
     
 }
