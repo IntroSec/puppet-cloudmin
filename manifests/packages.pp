@@ -11,8 +11,16 @@
 ################################################################################
 class cloudmin::packages {
     $packages   = ['perl','openssl','libio-pty-perl','libio-stty-perl','libnet-ssleay-perl','libwww-perl','libdigest-hmac-perl','libxml-simple-perl','libcrypt-ssleay-perl','libauthen-pam-perl','cron','bind9','openssh-server','openssh-client','lsof','libjson-perl','bind9utils','dhcp3-server','libdigest-sha1-perl']
+    $cloudmin_packages = ['webmin','webmin-server-manager','webmin-virtual-server-theme','webmin-virtual-server-mobile','webmin-security-updates','webmin-cloudmin-services']
 
+
+# install Cloudmin dependencies
     package { $packages:
+        ensure => present,
+        }
+
+# install Cloudmin and Webmin
+    package { $cloudmin_packages:
         ensure => present,
         }
 }
