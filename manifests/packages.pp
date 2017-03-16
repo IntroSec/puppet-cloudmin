@@ -10,5 +10,9 @@
 #
 ################################################################################
 class cloudmin::packages {
-    
+    $packages   = ['perl','openssl','libio-pty-perl','libio-stty-perl','libnet-ssleay-perl','libwww-perl','libdigest-hmac-perl','libxml-simple-perl','libcrypt-ssleay-perl','libauthen-pam-perl','cron','bind9','openssh-server','openssh-client','lsof','libjson-perl','bind9utils','dhcp3-server','libdigest-sha1-perl']
+
+    package { $packages:
+        ensure => present,
+        }
 }
