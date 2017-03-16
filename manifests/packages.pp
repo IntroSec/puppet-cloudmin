@@ -1,7 +1,7 @@
 ################################################################################
 #
-#    filename: cloudmin::init.pp
-# description: init.pp file for the Cloudmin Puppet module
+#    filename: packages.pp
+# description: manifest for installing all needed packages
 #      author: Andre Mattie
 #       email: devel@introsec.ca
 #         GPG: 5620 A200 6534 B779 08A8  B22B 0FA6 CD54 93EA 430D
@@ -9,10 +9,6 @@
 #        date: 03/16/2017
 #
 ################################################################################
-class cloudmin::init {
-    $serial = undef
-    $key    = undef
-    $ver    = 'gpl'
+class cloudmin::packages {
     
-
 }
